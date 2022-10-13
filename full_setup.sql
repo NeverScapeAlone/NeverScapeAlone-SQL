@@ -3,7 +3,7 @@ CREATE TABLE `access_tokens` (
  `access_token` text NOT NULL,
  `permissions` int NOT NULL,
  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `users` (
  `user_id` int NOT NULL AUTO_INCREMENT COMMENT 'auto-incremented user ID',
@@ -16,7 +16,7 @@ CREATE TABLE `users` (
  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'account creation timestamp',
  PRIMARY KEY (`user_id`),
  UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Basic information for users of the NeverScapeAlone plugin'
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Basic information for users of the NeverScapeAlone plugin';
 
 CREATE TABLE `user_token` (
  `ID` int NOT NULL AUTO_INCREMENT COMMENT 'entry id',
@@ -26,4 +26,4 @@ CREATE TABLE `user_token` (
  PRIMARY KEY (`ID`),
  KEY `user_id` (`user_id`),
  CONSTRAINT `user_token_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
